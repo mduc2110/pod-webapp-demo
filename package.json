@@ -1,0 +1,26 @@
+{
+  "name": "pod-webapp-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Demo web application showcasing @pod/sdk React library features",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pod/sdk": "git+ssh://git@github.com:mduc2110/pod-sdk-react.git",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "@vitejs/plugin-react": "^5.1.1",
+    "typescript": "^5.3.3",
+    "vite": "^7.2.6"
+  }
+}
+
