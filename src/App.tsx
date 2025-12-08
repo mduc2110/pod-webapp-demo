@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PodSDKProvider, PodWebView, PodButton, usePodSDK } from '@pod/sdk';
+import { PodSDKProvider, usePodEvent } from '@pod/sdk';
 import './App.css';
 import BasicExample from './examples/BasicExample';
 import EventExample from './examples/EventExample';
@@ -58,7 +58,7 @@ function App() {
 }
 
 function BridgeStatus() {
-  const { isAvailable } = usePodSDK();
+  const { isAvailable } = usePodEvent();
   return (
     <span className={isAvailable ? 'status-available' : 'status-unavailable'}>
       Bridge: {isAvailable ? '✅ Available' : '❌ Not Available (Running in browser)'}

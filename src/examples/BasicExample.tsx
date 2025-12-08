@@ -1,7 +1,7 @@
-import { PodButton, usePodSDK } from '@pod/sdk';
+import { PodButton, usePodEvent } from '@pod/sdk';
 
 export default function BasicExample() {
-  const { isAvailable, postEvent } = usePodSDK();
+  const { isAvailable, postEvent } = usePodEvent();
 
   const handleCustomEvent = () => {
     postEvent('custom_action', {
@@ -54,9 +54,9 @@ export default function BasicExample() {
       </div>
 
       <div className="example-section">
-        <h3>Using usePodSDK Hook</h3>
+        <h3>Using usePodEvent Hook</h3>
         <p>
-          The <code>usePodSDK</code> hook provides direct access to the SDK's functionality,
+          The <code>usePodEvent</code> hook provides direct access to the SDK's functionality,
           allowing you to post custom events programmatically.
         </p>
         <div className="button-group">
@@ -69,7 +69,7 @@ export default function BasicExample() {
       <div className="example-section">
         <h3>Code Example</h3>
         <div className="code-block">
-{`import { PodSDKProvider, PodButton, usePodSDK } from '@pod/sdk';
+{`import { PodSDKProvider, PodButton, usePodEvent } from '@pod/sdk';
 
 function App() {
   return (
@@ -80,7 +80,7 @@ function App() {
 }
 
 function MyComponent() {
-  const { postEvent, isAvailable } = usePodSDK();
+  const { postEvent, isAvailable } = usePodEvent();
 
   const handleClick = () => {
     postEvent('custom_action', { data: 'value' });

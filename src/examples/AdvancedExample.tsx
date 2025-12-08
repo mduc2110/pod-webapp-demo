@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { usePodSDK, usePodWebView, PodButton } from '@pod/sdk';
+import { usePodEvent, usePodWebView, PodButton } from '@pod/sdk';
 
 export default function AdvancedExample() {
-  const { isAvailable, postEvent, onEvent } = usePodSDK();
+  const { isAvailable, postEvent, onEvent } = usePodEvent();
   const { close, ready, expand } = usePodWebView({
     onClose: () => {
       console.log('WebView closed via callback');
@@ -216,10 +216,10 @@ export default function AdvancedExample() {
       <div className="example-section">
         <h3>Code Example</h3>
         <div className="code-block">
-{`import { usePodSDK, usePodWebView } from '@pod/sdk';
+{`import { usePodEvent, usePodWebView } from '@pod/sdk';
 
 function AdvancedExample() {
-  const { postEvent, onEvent } = usePodSDK();
+  const { postEvent, onEvent } = usePodEvent();
   const { close, ready, expand } = usePodWebView({
     onClose: () => console.log('Closed'),
     onInitialized: () => console.log('Initialized'),

@@ -10,7 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@pod/sdk": "git+ssh://git@github.com:mduc2110/pod-sdk-react.git",
+    "@pod/sdk": "./../pod-sdk-react",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

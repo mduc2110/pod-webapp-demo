@@ -1,8 +1,8 @@
-import { PodButton, usePodSDK } from '@pod/sdk';
+import { PodButton, usePodEvent } from '@pod/sdk';
 import { useState } from 'react';
 
 export default function CustomButtonExample() {
-  const { postEvent } = usePodSDK();
+  const { postEvent } = usePodEvent();
   const [clickCount, setClickCount] = useState(0);
 
   return (
@@ -90,7 +90,7 @@ export default function CustomButtonExample() {
       <div className="example-section">
         <h3>Custom Button Using Hook</h3>
         <p>
-          Create your own buttons using the <code>usePodSDK</code> or <code>usePodWebView</code> hooks:
+          Create your own buttons using the <code>usePodEvent</code> or <code>usePodWebView</code> hooks:
         </p>
         <div className="button-group">
           <button
@@ -122,10 +122,10 @@ export default function CustomButtonExample() {
       <div className="example-section">
         <h3>Code Example</h3>
         <div className="code-block">
-{`import { PodButton, usePodSDK } from '@pod/sdk';
+{`import { PodButton, usePodEvent } from '@pod/sdk';
 
 function CustomButtons() {
-  const { postEvent } = usePodSDK();
+  const { postEvent } = usePodEvent();
 
   return (
     <div>

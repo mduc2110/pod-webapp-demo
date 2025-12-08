@@ -91,7 +91,7 @@ pod-webapp-demo/
 Demonstrates:
 - Setting up `PodSDKProvider`
 - Using `PodButton` component
-- Using `usePodSDK` hook
+- Using `usePodEvent` hook
 - Checking bridge availability
 
 ### Event Handling
